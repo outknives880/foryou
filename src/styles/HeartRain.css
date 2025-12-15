@@ -1,0 +1,37 @@
+.falling-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  top: -2rem;
+  font-size: 1.5rem;
+  animation: fall 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* Contoh variasi posisi dan delay */
+.heart-0  { left: 5%;  animation-delay: 0s; }
+.heart-1  { left: 20%; animation-delay: 1s; }
+.heart-2  { left: 40%; animation-delay: 2s; }
+.heart-3  { left: 60%; animation-delay: 0.5s; }
+.heart-4  { left: 80%; animation-delay: 1.5s; }
+/* Tambahkan sampai heart-19 sesuai jumlah hati */
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

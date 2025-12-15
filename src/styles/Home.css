@@ -1,0 +1,277 @@
+
+body {
+  font-family: 'DotGothic16', monospace;
+  background: #ffffff; /* atau var(--soft-pink) jika ingin nuansa lembut */
+  color: var(--deep-purple);
+  line-height: 1.6;
+}
+.section-title,
+.subtitle,
+.target-name,
+.kenangan-box {
+  font-family: 'DotGothic16', monospace;
+}
+.love-letter,
+.birthday-wish,
+.sweet-message {
+  font-family: 'dotgothic16', monospace;
+}
+.section-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+}
+
+.love-letter {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+  margin-top: 1rem;
+}
+
+
+/* 🌼 MainGreeting */
+.main-greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* isi di atas */
+  align-items: center;           /* rata tengah horizontal */
+  padding-top: 2rem;
+  text-align: center;
+  font-family: 'DotGothic16', monospace;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;             /* full layar */
+  box-sizing: border-box;
+}
+
+.page-lock {
+  position: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;              /* 🔒 blok scroll */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff;
+  z-index: 998;
+}
+
+/* ✨ Greeting content */
+.subtitle {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  margin-top: 1rem;
+}
+
+.target-name {
+  font-size: 2rem;
+  color: #ff1493;
+  margin-bottom: 1rem;
+}
+
+.birthday-gif {
+  width: 180px;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+  object-fit: cover;
+}
+
+
+.birthday-wish {
+  font-size: 1.1rem;
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+.date-banner {
+  font-size: 0.9rem;
+  background: #ffe4e1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.bottom-message .sweet-message {
+  font-size: 0.9rem;
+  color: #ff69b4;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border-radius: 12px;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* 🎵 Music & Gift buttons */
+.music-player {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
+.music-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: #ffffff;
+  color: #ff69b4;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(255, 182, 193, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001; /* pastikan di atas konten lain */
+}
+
+.music-toggle:hover {
+  background-color: #ffaabf;
+  transform: scale(1.05);
+}
+
+.gift-top-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-family: 'DotGothic16', monospace;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgb(255, 219, 241);
+  padding: 0.5rem 0.8rem;
+  background: #ffffff;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001; /* pastikan di atas elemen lain */
+}
+
+
+.gift-top-btn:hover {
+  background: #ffaabf;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* 💖 Capsule Navbar Mini */
+.capsule-nav {
+  position: fixed;
+  bottom: 35px;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.capsule-container {
+  display: flex;
+  gap: 0.9rem;
+  background-color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 6px rgba(255, 182, 193, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: #ff0080;
+}
+
+.capsule-container button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ffb6c1;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.capsule-container button:hover {
+  transform: scale(1.1);
+  color: #ffb6c1;
+}
+
+.creator-name {
+  margin-top: 0.2rem;
+  font-size: 0.65rem;
+  color: #ff69b4;
+  font-weight: 500;
+}
+
+/* Icon nav */
+.nav-item {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ff69b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;              /* lingkaran kecil */
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: #ffe4ec;
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.4);
+  transform: scale(1.1);
+}
+
+.nav-item.active {
+  background: #ffb6c1;
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+}
+
+/* Section umum */
+section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Tombol umum */
+button {
+  padding: 0.6rem 1rem;
+  margin: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffdae3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+.photo-wrapper {
+  width: 180px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birthday-photo {
+  width: 180px;        /* sama dengan GIF */
+  height: 180px;       /* tetapkan tinggi agar kotak pas */
+  border-radius: 12px;
+  object-fit: cover;   /* crop otomatis tanpa distorsi */
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+}
+
+.birthday-photo:hover {
+  transform: scale(1.03);
+}

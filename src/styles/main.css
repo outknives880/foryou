@@ -1,0 +1,189 @@
+:root {
+  --soft-pink: #ffefef;
+  --hot-pink: #ff69b4;
+  --lavender: #f8f8ff;
+  --deep-purple: #4a004a;
+  --gold: #ffd700;
+}
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DotGothic16', monospace;
+  background: #ffffff;
+  color: var(--deep-purple);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Import font dot-matrix */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* 🌸 SplashScreen */
+#splash {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.heart-bounce {
+  font-size: 3rem;
+  animation: bounceHeart 1s infinite alternate;
+  margin-bottom: 1rem;
+  color: var(--hot-pink);
+}
+
+@keyframes bounceHeart {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.dot-counter {
+  font-family: 'DotGothic16', monospace;
+  font-size: 2rem;
+  color: var(--hot-pink);
+  text-shadow: 0 0 6px #ffd1ef;
+  letter-spacing: 0.1rem;
+}
+
+/* 🌟 Efek Fade-In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.3s; }
+.fade-in.delay-2 { animation-delay: 0.6s; }
+.fade-in.delay-3 { animation-delay: 0.9s; }
+.fade-in.delay-4 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎂 Halaman Birthday */
+.birthday-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  font-family: "DotGothic16", sans-serif;
+  color: var(--hot-pink);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--hot-pink);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--hot-pink);
+  margin-top: 1rem;
+}
+
+.target-name {
+  font-size: 2rem;
+  color: #ff1493;
+  margin-bottom: 1rem;
+}
+
+.birthday-gif {
+  width: 180px;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+  object-fit: cover;
+}
+
+
+.birthday-wish {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.date-banner {
+  font-size: 1rem;
+  background: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #ff1493;
+}
+
+.sweet-message {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  font-style: italic;
+  margin-top: 1rem;
+  color: var(--hot-pink);
+}
+
+/* 🎂 Kue 3D */
+.cake-wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+/* 🎂 Countdown Timer */
+.countdown-timer {
+  font-size: 1.6rem;                  /* sedikit lebih besar agar fokus */
+  margin: 0.8rem 0;                   /* jarak atas-bawah lebih proporsional */
+  color: var(--hot-pink);
+  text-shadow: 0 0 8px rgba(255, 209, 239, 0.8); /* glow lembut */
+  font-weight: 600;                   /* lebih tegas */
+  letter-spacing: 1px;                /* spasi antar huruf */
+  transition: all 0.3s ease;          /* animasi halus saat resize */
+}
+
+
+/* 💌 Sweet Message */
+.sweet-message {
+  font-size: 1rem;
+  color: #ff69b4;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border-radius: 12px;
+  margin-top: 0.6rem;
+  font-style: italic;
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6);
+}
+
+/* 📱 Responsif */
+@media (max-width: 600px) {
+  .title { font-size: 1.6rem; }
+  .target-name { font-size: 1.4rem; }
+  .cake-wrapper { height: 280px; }
+  .countdown-timer { 
+    font-size: 1.2rem; 
+    margin: 0.6rem 0; 
+  }
+  .date-banner, .sweet-message { font-size: 0.85rem; }
+}

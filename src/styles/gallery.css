@@ -1,0 +1,179 @@
+.gallery-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'DotGothic16', monospace;
+  color: var(--deep-purple);
+}
+
+/* Judul */
+.section-title {
+  font-size: 1.6rem;
+  color: var(--hot-pink);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+/* 🖼️ Gallery Kenangan */
+/* ✨ Grid Kenangan */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* selalu 3 kolom */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+/* 📸 Kotak Kenangan */
+.kenangan-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* kotak otomatis */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kenangan-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(255, 105, 180, 0.6);
+}
+
+.kenangan-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ❤️ Bingkai Love */
+.love-frame {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 1rem;
+  background: #fff;
+  border: 2px solid #ff69b4;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 0 6px rgba(255, 182, 193, 0.6);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.kenangan-box:hover .love-frame {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* 📱 Responsif Mobile */
+@media (max-width: 480px) {
+  .memory-grid {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .kenangan-box {
+    border-radius: 12px;
+  }
+
+  .love-frame {
+    font-size: 0.9rem;
+    padding: 3px;
+  }
+}
+
+/* 💌 Amplop Ikonik */
+.letter-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.glow-circle {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ffe4ec 0%, #ffb6c1 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+}
+
+.envelope-body {
+  width: 80px;
+  height: 60px;
+  background: linear-gradient(to bottom, #ffffff, #fdfdfd);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  color: #ff69b4;
+  animation: pulse 1.5s infinite;
+}
+
+.click-hint {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #ff69b4;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+/* 💌 Surat Cinta */
+.paper {
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.paper.open { 
+  opacity: 1; 
+  transform: translateY(0); 
+  position: relative; z-index: 10; /* pastikan di atas amplop & ikon */ 
+  padding-bottom: 3rem; /* beri ruang agar tombol tidak tertutup */ }
+
+.love-letter {
+  font-size: 1rem;
+  color: #ff1493;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Tombol Tutup */
+.paper.open { 
+  opacity: 1; 
+  transform: translateY(0); 
+  position: relative; 
+  z-index: 10; /* pastikan di atas amplop & ikon */ 
+  padding-bottom: 3rem; /* beri ruang agar tombol tidak tertutup */ }
+
+.close-button:hover {
+  background: #ffaabf;
+  color: #ff1493;
+}

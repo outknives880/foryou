@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* Container SplashScreen */
+.splash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+/* Animasi hati bouncing */
+.heart-bounce {
+  font-size: 3rem;
+  animation: bounceHeart 1s infinite alternate;
+  margin-bottom: 1rem;
+  color: #ffdae3;
+}
+
+@keyframes bounceHeart {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.dot-counter {
+  font-family: 'DotGothic16', monospace;
+  font-size: 2rem;
+  color: #ffdae3;
+  text-shadow: 0 0 6px #ff86a4;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+
+
+/* Fade-out angka loading */
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+.ready-btn {
+  font-family: 'DotGothic16', monospace;
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px #ffceda;
+  padding: 0.4rem 1.2rem;
+  border: 2.3px solid #ffe8fa;
+  background: transparent;
+  color: #ff69b4;
+  border-radius: 99px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0 2px 8px rgb(255, 219, 241);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+.ready-btn:hover {
+  background: #ffffff;
+  color: #ffceda;
+  transform: scale(1.05); 
+}
+
+/* Animasi fade-in tombol Ready */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+
+.hadiah-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikal tengah */
+  align-items: center;     /* horizontal tengah */
+  height: 100vh;           /* isi seluruh tinggi layar */
+  text-align: center;
+  font-family: 'DotGothic16', monospace;
+  background: #ffffff;
+  color: #4b0082;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+.gift-box-big {
+  font-size: 4rem;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.gift-message {
+  margin: 1rem;
+  font-size: 1rem;
+  color: #ff69b4;
+}
+
+.surprise-content {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.surprise-text {
+  font-size: 1rem;
+  color: #ff1493;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.surprise-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.6);
+  margin-bottom: 1rem;
+}
+
+.gift-close {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'DotGothic16', monospace;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gift-close:hover {
+  background: #ff1493;
+}

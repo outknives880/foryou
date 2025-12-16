@@ -14,7 +14,7 @@ const LoveLetter: React.FC = () => {
 
       {/* 🖼️ Wadah Kenangan */}
       <div className="memory-grid">
-        {["public/galery/foto1.jpg", "public/galery/foto2.jpg", "public/galery/foto3.jpg"].map((src, index) => (
+        {["/galery/foto1.jpg", "/galery/foto2.jpg", "/galery/foto3.jpg"].map((src, index) => (
           <div className="kenangan-box" key={index}>
             <div className="love-frame">❤️</div>
             <img src={`/${src}`} alt={`Kenangan ${index + 1}`} />

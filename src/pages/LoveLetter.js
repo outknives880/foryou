@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
-import "../styles/Gallery.css";
+import "../styles/gallery.css";
 const LoveLetter = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleLetter = () => {

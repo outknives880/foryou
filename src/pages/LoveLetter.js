@@ -1,11 +1,56 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
+import "../styles/gallery.css";
+
 const LoveLetter = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleLetter = () => {
-        setIsOpen(!isOpen);
-    };
-    return (_jsxs("div", { className: "gallery-section", children: [_jsx("h2", { className: "section-title", children: "Gallery kita" }), _jsx("div", { className: "memory-grid", children: 
-        ["/galery/foto1.jpg", "/galery/foto2.jpg", "/galery/foto3.jpg"].map((src, index) => (_jsxs("div", { className: "kenangan-box", children: [_jsx("div", { className: "love-frame", children: "\u2764\uFE0F" }), _jsx("img", { src: `/${src}`, alt: `Kenangan ${index + 1}` })] }, index))) }), _jsx("div", { className: "letter-wrapper", children: !isOpen ? (_jsxs("div", { className: "envelope-icon", onClick: toggleLetter, children: [_jsx("div", { className: "glow-circle", children: _jsx("div", { className: "envelope-body", children: _jsx("div", { className: "heart-icon", children: "\uD83D\uDC96" }) }) }), _jsx("p", { className: "click-hint", children: "Klik untuk membuka surat " })] })) : (_jsxs("div", { className: "paper open", children: [_jsxs("p", { className: "love-letter", children: ["\"Di hari spesialmu, aku nggak cuma bersyukur karena kamu lahir\u2014aku bersyukur karena semesta mempertemukan kita. Kamu bukan cuma cinta, kamu rumahnya hatiku.\"\uD83D\uDC96", _jsx("br", {}), _jsx("br", {}), "#dari calon suamimu nanti \uD83D\uDE09"] }), _jsx("button", { className: "close-button", onClick: toggleLetter, children: "X" })] })) })] }));
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleLetter = () => setIsOpen(!isOpen);
+
+  // Array gambar tanpa "public/"
+  const images = ["galery/foto1.jpg", "galery/foto2.jpg", "galery/foto3.jpg"];
+
+  return (
+    <div className="gallery-section">
+      <h2 className="section-title">Gallery kita</h2>
+
+      <div className="memory-grid">
+        {images.map((src, index) => (
+          <div className="kenangan-box" key={index}>
+            <div className="love-frame">❤️</div>
+            {/* src akan jadi /galery/foto1.jpg */}
+            <img src={`/${src}`} alt={`Kenangan ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+
+      <div className="letter-wrapper">
+        {!isOpen ? (
+          <div className="envelope-icon" onClick={toggleLetter}>
+            <div className="glow-circle">
+              <div className="envelope-body">
+                <div className="heart-icon">💖</div>
+              </div>
+            </div>
+            <p className="click-hint">Klik untuk membuka surat </p>
+          </div>
+        ) : (
+          <div className="paper open">
+            <p className="love-letter">
+              "Di hari spesialmu, aku nggak cuma bersyukur karena kamu lahir—
+              aku bersyukur karena semesta mempertemukan kita. Kamu bukan cuma
+              cinta, kamu rumahnya hatiku." 💖
+              <br />
+              <br />
+              #dari calon suamimu nanti 😉
+            </p>
+            <button className="close-button" onClick={toggleLetter}>
+              X
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
+
 export default LoveLetter;
+/

@@ -6,7 +6,7 @@ const LoveLetter = () => {
   const toggleLetter = () => setIsOpen(!isOpen);
 
   // Array gambar tanpa "public/"
-  const images = ["galery/foto1.jpg", "galery/foto2.jpg", "galery/foto3.jpg"];
+  const images = ["gallery/foto1.jpg", "gallery/foto2.jpg", "gallery/foto3.jpg"];
 
   return (
     <div className="gallery-section">
@@ -53,4 +53,3 @@ const LoveLetter = () => {
 };
 
 export default LoveLetter;
-/
